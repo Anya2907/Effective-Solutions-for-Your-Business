@@ -9,7 +9,7 @@
     openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
     mobileMenu.classList.toggle("is-open");
 
-    document.body.style.overflow = isModalOpen ? "" : "hidden";
+    document.body.style.overflow = isMenuOpen ? "" : "hidden";
   };
 
   openMenuBtn.addEventListener("click", toggleMenu);
@@ -20,7 +20,7 @@
     if (!e.matches) return;
     mobileMenu.classList.remove("is-open");
     openMenuBtn.setAttribute("aria-expanded", false);
-    bodyScrollLock.enableBodyScroll(document.body);
+
     document.body.style.overflow = "";
   });
 })();
